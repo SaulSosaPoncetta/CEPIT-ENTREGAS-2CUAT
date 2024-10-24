@@ -1,6 +1,7 @@
+import { Vehiculo } from './vehiculos';
 import { Titular } from './titular';
 
-export class Vehiculo {
+export class Auto extends Vehiculo {
     constructor(
         public marca: string,
         public modelo: string,
@@ -8,10 +9,8 @@ export class Vehiculo {
         public numeroChasis: string,
         public numeroMotor: string,
         public numeroPatente: string,
-        public titular: string,
-    ) { }
-
-    public descripcion(): string {
-        return `${this.tipo}: ${this.marca} ${this.modelo}`;
+        public titular: Titular
+    ) {
+        super(marca, modelo, tipo, numeroChasis, numeroMotor, numeroPatente, titular);
     }
 }

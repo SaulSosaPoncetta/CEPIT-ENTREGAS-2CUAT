@@ -7,7 +7,7 @@ export class Titular {
         public estadoCivil: string
     ) { }
 
-    descripcion(): string {
+    public descripcion(): string {
         return `${this.nombre} ${this.apellido}, Documento: ${this.documento}`;
     }
 }
